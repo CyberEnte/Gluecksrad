@@ -1,0 +1,51 @@
+// out: ../css/b2c.css
+
+--root {
+
+}
+
+body, html {
+    height: 100%;
+}
+
+.banner {
+    height: 50vh !important;
+    object-fit: cover;
+    object-position: center;
+}
+
+footer {
+    position: sticky;
+    height: 4rem;
+    top: calc(100vh);
+    color: #bdbdbd;
+}
+
+.navbar {
+    background: #f4f4f4;
+}
+
+.navbar-brand img {
+    height: 2rem;
+    display: block;
+}
+
+.nav-link {
+    &.active {
+        background: #dfdfdf;
+    }
+    &:hover {
+        background: #e7e7e7;
+    }
+}
+
+.news-alert {
+    background: #e8e100;
+    color: #00121e;
+    font-size: .9rem;
+    padding: .2rem;
+}
+
+@import url('item_list.less');
+@import url('item_card.less');
+@import url('checkout.less');

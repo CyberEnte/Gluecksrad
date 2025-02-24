@@ -1,0 +1,26 @@
+version: '3.0'
+volumes:
+    dbdata-shop:
+      external: false
+services:
+  web-shop:
+    build: .
+    container_name: web-shop
+    ports:
+    - "8080:80"
+    volumes:
+    - ./../:/var/www/html
+    links:
+    - "db-shop:database"
+  db-shop:
+    image: mariadb:10.11.2
+    container_name: db-shop
+    environment:
+      MYSQL_ROOT_PASSWORD: 123
+      MYSQL_DATABASE: dcshop
+      MYSQL_USER: dcshop
+      MYSQL_PASSWORD: 123
+    ports:
+    - "3406:3306"
+    volumes:
+    - dbdata-shop:/var/lib/mysql

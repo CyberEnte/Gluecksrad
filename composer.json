@@ -1,0 +1,17 @@
+{
+    "name": "dc/shop",
+    "autoload": {
+        "psr-4": {
+            "DC\\Shop\\": ""
+        }
+    },
+    "authors": [
+        {
+            "name": "dc AG",
+            "email": "info@dc.ag"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.5"
+    }
+}
