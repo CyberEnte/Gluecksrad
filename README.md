@@ -1,1 +1,1 @@
-# Gl-cksrad
+# Glücksrad
